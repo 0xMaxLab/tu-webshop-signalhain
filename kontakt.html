@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<title>Kontakt – Signalhain</title>
+<meta name="description" content="Fragen zu Signalhain, zu einer Bestellung oder zur Barrierefreiheit? So erreichst du die Feldspat Software OG.">
+<meta name="tdm-reservation" content="1">
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- CONSENT -->
+<section class="consent" id="consent" aria-labelledby="consent-title" hidden>
+  <div class="wrap">
+    <h2 id="consent-title" tabindex="-1">Darf diese Seite Statistikdaten speichern?</h2>
+    <p>Wir speichern im Browser nur, was der Shop braucht: deinen Warenkorb und diese Entscheidung. Mit deiner Erlaubnis zählen wir zusätzlich anonymisiert, welche Seiten aufgerufen werden (Matomo, eigener Server, IP-Adresse gekürzt). Du kannst das jederzeit unten auf jeder Seite unter „Cookie-Einstellungen“ ändern. <a href="datenschutz.html#cookies">Details in der Datenschutzerklärung</a></p>
+    <fieldset>
+      <legend>Kategorien</legend>
+      <label><input type="checkbox" checked disabled> Notwendig (Warenkorb, diese Einstellung)</label>
+      <label><input type="checkbox" id="c-stats"> Statistik (Matomo)</label>
+    </fieldset>
+    <div class="row">
+      <button type="button" class="btn" id="c-reject">Nur notwendige</button>
+      <button type="button" class="btn" id="c-save">Auswahl speichern</button>
+      <button type="button" class="btn" id="c-accept">Alle erlauben</button>
+    </div>
+  </div>
+</section>
+
+<!-- HEADER -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">Signalhain<span class="visually-hidden"> – zur Startseite</span></a>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html">Shop</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="lizenz.html">Lizenz</a></li><li><a href="kontakt.html" aria-current="page">Kontakt</a></li><li><a href="warenkorb.html">Warenkorb <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> Artikel</span></a></li></ul></nav>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<main id="inhalt" tabindex="-1">
+<p class="wrap toast" id="status" role="status" aria-live="polite"></p>
+<div class="wrap page-head">
+  <h1>Kontakt</h1>
+  <p>Wir sind zu viert und lesen jede Nachricht selbst. Meistens antworten wir am selben oder nächsten Werktag.</p>
+</div>
+<div class="wrap split">
+  <section>
+    <h2 id="h-form">Nachricht schreiben</h2>
+    <form id="contact-form" data-done="contact-ok">
+      <p class="hint">Alle Felder außer „Bestellnummer“ sind Pflichtfelder.</p>
+      <div class="field">
+        <label for="ct-name">Name</label>
+        <input type="text" id="ct-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="ct-email">E-Mail-Adresse</label>
+        <input type="email" id="ct-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="ct-topic">Worum geht es?</label>
+        <select id="ct-topic" name="topic">
+          <option>Frage vor dem Kauf</option>
+          <option>Problem mit einer Bestellung</option>
+          <option>Technisches Problem im Spiel</option>
+          <option>Barriere auf der Website oder im Spiel</option>
+          <option>Lizenz für Musik oder Videos</option>
+          <option>Datenschutz</option>
+          <option>Presse</option>
+          <option>Etwas anderes</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="ct-order">Bestellnummer (optional)</label>
+        <input type="text" id="ct-order" name="order" aria-describedby="ct-order-hint">
+        <p class="hint" id="ct-order-hint">Steht in der Bestätigungs-E-Mail, zum Beispiel SH-2026-48213.</p>
+      </div>
+      <div class="field">
+        <label for="ct-msg">Nachricht</label>
+        <textarea id="ct-msg" name="message" required></textarea>
+      </div>
+      <p class="hint">Wir verwenden deine Angaben nur, um dir zu antworten. Mehr dazu in der <a href="datenschutz.html#kontakt">Datenschutzerklärung</a>.</p>
+      <p><button type="submit" class="btn">Nachricht senden</button></p>
+    </form>
+    <div class="ok" id="contact-ok" tabindex="-1" hidden>
+      <h2>Nachricht angekommen</h2>
+      <p>So würde die Bestätigung im echten Shop aussehen. Da dies ein Studienprojekt ist, wurde nichts gesendet.</p>
+    </div>
+  </section>
+  <section>
+    <h2 id="h-direct">Direkt</h2>
+    <dl class="facts">
+      <dt>E-Mail</dt><dd>hallo@feldspat.example</dd>
+      <dt>Support</dt><dd>support@feldspat.example</dd>
+      <dt>Datenschutz</dt><dd>datenschutz@feldspat.example</dd>
+      <dt>Post</dt><dd>Feldspat Software OG<br>Zieglergasse 38/2/14<br>1070 Wien, Österreich</dd>
+    </dl>
+    <h3>Erreichbarkeit</h3>
+    <p>Montag bis Freitag, 9 bis 17 Uhr. An Feiertagen und zwischen Weihnachten und Neujahr schauen wir nur einmal am Tag ins Postfach.</p>
+    <p>Ein Telefon haben wir nicht. Wenn du lieber sprichst als schreibst, schick uns eine Nachricht mit deiner Nummer und wir rufen zurück.</p>
+    <h3>Bevor du schreibst</h3>
+    <p>Bei technischen Problemen hilft uns die Datei <code>signalhain.log</code>. Du findest sie im Spiel unter Einstellungen → Hilfe → Protokoll öffnen.</p>
+  </section>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <h2>Feldspat Software OG</h2>
+      <p>Kleines Spielestudio in Wien-Neubau. Wir machen Signalhain, ein ruhiges Rätselspiel über ein Stellwerk am Ende der Strecke.</p>
+      <p>Zieglergasse 38/2/14, 1070 Wien<br>hallo@feldspat.example</p>
+    </div>
+    <nav aria-label="Rechtliches">
+      <h2>Rechtliches</h2>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="lizenz.html">Lizenz &amp; Kaufbedingungen</a></li>
+        <li><a href="medien.html">Medien &amp; Quellen</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Hilfe">
+      <h2>Hilfe</h2>
+      <ul>
+        <li><a href="kontakt.html">Kontakt &amp; Support</a></li>
+        <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+        <li><button type="button" class="linkbtn" data-consent-open>Cookie-Einstellungen</button></li>
+      </ul>
+    </nav>
+    <div class="legal">
+      <span>© 2026 Feldspat Software OG. Alle Rechte vorbehalten.</span>
+      <span>Quellenangaben zu Bildern, Musik und Schriften: <a href="medien.html">Medien &amp; Quellen</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVA SCRIPT -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

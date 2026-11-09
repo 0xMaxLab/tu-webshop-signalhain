@@ -1,0 +1,138 @@
+/* Stylesheet Signalhain shop */
+
+/* Fonts (self-hosted, not from Google) */
+@font-face { font-family: "Barlow Condensed"; font-weight: 600; src: url(../assets/fonts/barlow-condensed-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-weight: 700; src: url(../assets/fonts/barlow-condensed-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 400; src: url(../assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 400; font-style: italic; src: url(../assets/fonts/atkinson-hyperlegible-latin-400-italic.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 700; src: url(../assets/fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; src: url(../assets/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2"); }
+
+/* always light theme */
+:root { color-scheme: light only; }
+
+body {
+  margin: 0;
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  background: white;
+  color: #222;
+}
+
+* { box-sizing: border-box; }
+img, video { max-width: 100%; height: auto; }
+
+a { color: #0b5cad; }
+
+/* clearly visible focus (accessibility) */
+:focus-visible { outline: 3px solid #e67e00; outline-offset: 2px; }
+
+h1, h2, h3 {
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  color: #1f5c40;
+  overflow-wrap: break-word;
+}
+h1 { font-size: 2.2em; margin: 0.5em 0 0.3em; }
+h2 { font-size: 1.6em; margin: 1.2em 0 0.4em; }
+h3 { font-size: 1.3em; margin: 1em 0 0.3em; }
+
+code { font-family: "IBM Plex Mono", monospace; }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.small, .hint, .stand { font-size: 15px; color: #555; }
+.tag { font-size: 1.2em; margin-top: 0; }
+.price { font-weight: bold; }
+.toast { color: #1b6e2f; font-weight: bold; margin: 0; }
+
+/* Cookie banner */
+.consent { border-bottom: 1px solid #ccc; background: #f5f5f5; padding: 8px 0 12px; }
+.consent h2 { font-size: 1.3em; margin: 0.3em 0; color: #222; }
+.consent fieldset { border: none; padding: 0; }
+.consent legend { position: absolute; left: -9999px; }
+.consent label { display: inline-block; margin-right: 20px; font-weight: normal; }
+
+/* Header */
+.site-head { border-bottom: 3px solid #1f5c40; padding: 10px 0; }
+.brand { color: #1f5c40; text-decoration: none; font-family: "Barlow Condensed", Arial, sans-serif; font-size: 28px; font-weight: 700; }
+.nav ul { list-style: none; margin: 4px 0 0; padding: 0; }
+.nav li { display: inline-block; margin-right: 16px; }
+.nav a { display: inline-block; padding: 4px 0; }
+.nav a[aria-current="page"] { font-weight: bold; color: #222; }
+
+main { padding-bottom: 30px; }
+
+/* two columns */
+.split { display: flex; flex-wrap: wrap; gap: 30px; }
+.split > * { flex: 1 1 340px; min-width: 0; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #1f5c40;
+  color: white;
+  border: 2px solid #1f5c40;
+  padding: 8px 16px;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn.ghost { background: white; color: #1f5c40; }
+.btn[aria-pressed="true"] { background: #e67e00; border-color: #e67e00; color: black; }
+.linkbtn { background: none; border: none; color: #0b5cad; text-decoration: underline; cursor: pointer; font: inherit; padding: 4px 0; }
+
+/* Tables */
+table { border-collapse: collapse; width: 100%; margin-bottom: 15px; }
+th, td { border-bottom: 1px solid #ccc; padding: 6px 8px; text-align: left; vertical-align: top; }
+caption { font-weight: bold; text-align: left; padding: 5px 0; }
+.table-scroll { overflow-x: auto; }
+.cart .num { text-align: right; white-space: nowrap; }
+.cart .total { font-weight: bold; }
+
+/* Products and trademarks */
+.product, .mark { border-top: 1px solid #ccc; padding: 4px 0 12px; }
+.product h3, .mark h3 { margin-top: 0.4em; }
+.mark .kind { color: #555; font-size: 15px; margin-bottom: 0; }
+.wordmark-sample { font-size: 28px; letter-spacing: 3px; font-weight: bold; overflow-wrap: anywhere; }
+.mark img.bild { width: 150px; height: 150px; }
+
+/* Video, audio */
+.player video { width: 100%; background: black; }
+audio { width: 100%; max-width: 450px; }
+details { margin: 8px 0; }
+summary { cursor: pointer; font-weight: bold; }
+
+.note { border-left: 4px solid #e0cf7a; background: #fffbe6; padding: 6px 12px; margin: 10px 0; }
+
+/* Legal pages */
+.doc nav h2 { font-size: 1.3em; }
+dl.facts dt { font-weight: bold; margin-top: 8px; }
+dl.facts dd { margin-left: 0; }
+
+/* Forms */
+.field { margin-bottom: 15px; }
+label { display: block; font-weight: bold; margin-bottom: 4px; }
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 8px;
+  font: inherit;
+  border: 1px solid #767676;
+}
+textarea { height: 150px; }
+input[type="checkbox"], input[type="radio"] { accent-color: #1f5c40; width: 20px; height: 20px; margin: 2px 8px 0 0; vertical-align: top; }
+.check { margin-bottom: 10px; }
+.check label { display: inline; font-weight: normal; }
+fieldset.radios { border: 1px solid #ccc; margin-bottom: 15px; max-width: 500px; }
+.ok { border-left: 4px solid #1b6e2f; background: #effaf1; padding: 6px 12px; }
+
+/* Footer */
+.site-foot { border-top: 1px solid #ccc; background: #f5f5f5; padding: 10px 0 20px; font-size: 15px; }
+.site-foot h2 { font-size: 1.2em; color: #222; margin: 0.8em 0 0.2em; }
+.site-foot ul { padding-left: 20px; margin: 0; }
+.site-foot li { padding: 3px 0; }
+.site-foot .legal { border-top: 1px solid #ccc; margin-top: 15px; padding-top: 10px; }
+.site-foot .legal span { display: block; }

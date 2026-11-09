@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<title>Signalhain – Rätselspiel im Stellwerk</title>
+<meta name="description" content="Signalhain ist ein ruhiges Rätselspiel für Windows, macOS und Linux. Du stellst Weichen und Signale in einem Bergbahnhof. Demo gratis, Vollversion 14,90 €.">
+<meta name="tdm-reservation" content="1">
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- CONSENT -->
+<section class="consent" id="consent" aria-labelledby="consent-title" hidden>
+  <div class="wrap">
+    <h2 id="consent-title" tabindex="-1">Darf diese Seite Statistikdaten speichern?</h2>
+    <p>Wir speichern im Browser nur, was der Shop braucht: deinen Warenkorb und diese Entscheidung. Mit deiner Erlaubnis zählen wir zusätzlich anonymisiert, welche Seiten aufgerufen werden (Matomo, eigener Server, IP-Adresse gekürzt). Du kannst das jederzeit unten auf jeder Seite unter „Cookie-Einstellungen“ ändern. <a href="datenschutz.html#cookies">Details in der Datenschutzerklärung</a></p>
+    <fieldset>
+      <legend>Kategorien</legend>
+      <label><input type="checkbox" checked disabled> Notwendig (Warenkorb, diese Einstellung)</label>
+      <label><input type="checkbox" id="c-stats"> Statistik (Matomo)</label>
+    </fieldset>
+    <div class="row">
+      <button type="button" class="btn" id="c-reject">Nur notwendige</button>
+      <button type="button" class="btn" id="c-save">Auswahl speichern</button>
+      <button type="button" class="btn" id="c-accept">Alle erlauben</button>
+    </div>
+  </div>
+</section>
+
+<!-- HEADER -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">Signalhain<span class="visually-hidden"> – zur Startseite</span></a>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html" aria-current="page">Shop</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="lizenz.html">Lizenz</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="warenkorb.html">Warenkorb <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> Artikel</span></a></li></ul></nav>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<main id="inhalt" tabindex="-1">
+<p class="wrap toast" id="status" role="status" aria-live="polite"></p>
+<div class="wrap">
+  <h1>Signalhain</h1>
+  <p class="tag">Ein Rätselspiel über ein Stellwerk am Ende der Strecke.</p>
+  <p>Hain ist ein kleiner Bahnhof in den Bergen, mit zwei Gleisen, einem Ladegleis und zehn Hebeln. Jeden Morgen kommen Züge aus beiden Richtungen, aber auf der eingleisigen Strecke hat immer nur einer Platz. Du stellst Weichen und Signale so, dass alle durchkommen. Nebenbei liest du im alten Fahrtenbuch, warum dein Vorgänger 1953 so plötzlich gegangen ist.</p>
+  <p>Für Windows, macOS und Linux. Empfohlen ab 10 Jahren.</p>
+  <p class="price">14,90 €</p>
+  <p>
+    <button type="button" class="btn" data-add="sh-spiel">In den Warenkorb</button>
+    <button type="button" class="btn ghost" data-demo>Demo laden</button>
+  </p>
+  <p class="small">Preis inkl. 20 % USt. Kein Abo, kein Konto, keine In-App-Käufe. Die Demo enthält die ersten 8 Stufen.</p>
+
+  <figure>
+    <img src="assets/img/stellwerk.webp" width="1440" height="961" loading="lazy" alt="Schwarzweißfoto aus einem Stellwerk: An der Wand hängt ein großes Gleisbild mit Uhr darüber. Ein Fahrdienstleiter mit Dienstmütze steht davor, an den Pulten mit Telefon und Röhrenmonitoren sitzen und stehen drei weitere Personen.">
+    <figcaption class="small">Echtes Vorbild: das Stellwerk Arth-Goldau in der Schweiz, 1985. Im Spiel fängst du eine Generation früher an, mit Hebeln statt Tasten. Foto: Rudolf Steiner, ETH-Bibliothek Zürich, Bildarchiv, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>, verkleinert (<a href="medien.html#fremd">Quelle</a>)</figcaption>
+  </figure>
+
+  <h2 id="h-features">Was im Spiel drin ist</h2>
+  <ul>
+    <li>48 Stufen in vier Fahrplanperioden (1953, 1961, 1972, 1989)</li>
+    <li>Formsignale, mechanische Weichen, später Lichtsignale</li>
+    <li>Eine Geschichte, die im Fahrtenbuch des Stellwerks erzählt wird</li>
+    <li>Modus „Freies Stellen“: eigene Bahnhöfe bauen und als Datei teilen</li>
+    <li>Kein Zeitdruck, die Uhr im Stellwerk lässt sich anhalten</li>
+  </ul>
+
+  <h2 id="h-video">Video</h2>
+  <p>So sieht das aus, was du im Spiel steuerst: Formsignale am Bahnhof Nemotice in Tschechien, die noch heute von Hand gestellt werden (24 Sekunden, nur Umgebungston). Untertitel beschreiben die Geräusche. Mit dem Knopf „Audiodeskription“ liest dein Browser vor, was im Bild passiert.</p>
+  <div class="player">
+    <video id="trailer" controls preload="metadata" playsinline poster="assets/media/signal-poster.jpg" width="1280" height="720">
+      <source src="assets/media/signal.webm" type="video/webm">
+      <source src="assets/media/signal.mp4" type="video/mp4">
+      <track kind="captions" src="assets/media/signal.de.vtt" srclang="de" label="Deutsch (Geräusche)" default>
+      <track kind="descriptions" src="assets/media/signal.beschreibung.vtt" srclang="de" label="Bildbeschreibung">
+      Dein Browser kann dieses Video nicht abspielen. Die Textfassung steht darunter.
+    </video>
+    <div class="controls">
+      <button type="button" class="btn" id="ad-toggle" aria-pressed="false">Audiodeskription</button>
+    </div>
+  </div>
+  <details>
+    <summary>Textfassung des Videos</summary>
+    <p>Ein kleiner Bahnhof an einem bewölkten Sommertag. Im Vordergrund liegen mehrere Gleise, dahinter Büsche und ein Stellwerkshäuschen. In der Mitte und rechts stehen drei rot-weiß gestreifte Masten mit Formsignalen. Ein blau-weißer Triebwagenzug fährt links aus dem Bahnhof, der Flügel am linken Signal zeigt dabei schräg nach oben (Fahrt frei). Der Zug wird kleiner und verschwindet am Bildrand. Nach etwa 18 Sekunden fällt der Flügel in die Waagrechte zurück, jetzt zeigen alle drei Signale Halt. Zu hören sind nur Wind und Geräusche vom Bahnhof.</p>
+    <p class="small">Video: Dmitry Novoklimov, „Diesel railcar Hydra CD 854 202-9 and semaphore signals at Nemotice station“, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>. Ausschnitt 0:38–1:02, verkleinert, ein- und ausgeblendet (<a href="medien.html#fremd">Quelle</a>)</p>
+  </details>
+
+  <h2 id="h-buy">Kaufen</h2>
+  <p>Du kaufst einmal und behältst das Spiel. Was du damit machen darfst, steht in der <a href="lizenz.html">Lizenz</a>.</p>
+  <div class="products">
+    <div class="product featured">
+      <h3>Signalhain + Soundtrack (Empfehlung)</h3>
+      <p>Spiel und alle 14 Musikstücke (MP3 und FLAC). 1,90 € günstiger als einzeln.</p>
+      <span class="price">17,90 €</span>
+      <button type="button" class="btn" data-add="sh-bundle" aria-label="In den Warenkorb: Signalhain + Soundtrack, 17,90 Euro">In den Warenkorb</button>
+    </div>
+    <div class="product">
+      <h3>Signalhain</h3>
+      <p>Vollversion, 48 Stufen und freies Stellen. Windows, macOS und Linux in einem Kauf.</p>
+      <span class="price">14,90 €</span>
+      <button type="button" class="btn" data-add="sh-spiel" aria-label="In den Warenkorb: Signalhain, 14,90 Euro">In den Warenkorb</button>
+    </div>
+    <div class="product">
+      <h3>Soundtrack „Oberhain“</h3>
+      <p>14 Stücke, 41 Minuten.</p>
+      <span class="price">4,90 €</span>
+      <button type="button" class="btn" data-add="sh-ost" aria-label="In den Warenkorb: Soundtrack Oberhain, 4,90 Euro">In den Warenkorb</button>
+    </div>
+  </div>
+  <p class="small">Alle Preise inkl. 20 % österreichischer USt. Bei Kauf aus einem anderen EU-Land gilt die Steuer deines Wohnsitzstaats.</p>
+
+  <h2 id="h-music">Hörprobe</h2>
+  <p>„Nebel über Oberhain“ aus dem Soundtrack.</p>
+  <audio controls preload="none" aria-describedby="music-desc">
+    <source src="assets/media/soundtrack-oberhain.ogg" type="audio/ogg">
+    <source src="assets/media/soundtrack-oberhain.mp3" type="audio/mpeg">
+  </audio>
+  <p id="music-desc" class="small">Instrumental, 26 Sekunden. Langsame gezupfte Gitarrenmelodie über vier Akkorden, leises Klacken im Takt, am Ende ausgeblendet.</p>
+
+  <h2>Systemanforderungen</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th scope="col">System</th><th scope="col">Mindestens</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Windows</th><td>Windows 10 (64 Bit), 4 GB RAM</td></tr>
+        <tr><th scope="row">macOS</th><td>macOS 12, Intel oder Apple Silicon</td></tr>
+        <tr><th scope="row">Linux</th><td>x86_64, OpenGL 3.3</td></tr>
+        <tr><th scope="row">Speicher</th><td>600 MB frei</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Häufige Fragen</h2>
+  <details><summary>Brauche ich ein Konto?</summary><p>Nein. Du bekommst einen Download-Link per E-Mail. Das Spiel funktioniert offline.</p></details>
+  <details><summary>Darf ich Videos vom Spiel machen?</summary><p>Ja, auch mit Werbeeinnahmen. Details in der <a href="lizenz.html#rechte">Lizenz, Punkt 2</a>.</p></details>
+  <details><summary>Ist das Spiel barrierefrei?</summary><p>Teilweise: komplett mit Tastatur spielbar, Signale unterscheiden sich auch durch Form statt nur Farbe, Schrift bis 200 %. Screenreader werden noch nicht unterstützt. Mehr in der <a href="barrierefreiheit.html">Erklärung zur Barrierefreiheit</a>.</p></details>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <h2>Feldspat Software OG</h2>
+      <p>Kleines Spielestudio in Wien-Neubau. Wir machen Signalhain, ein ruhiges Rätselspiel über ein Stellwerk am Ende der Strecke.</p>
+      <p>Zieglergasse 38/2/14, 1070 Wien<br>hallo@feldspat.example</p>
+    </div>
+    <nav aria-label="Rechtliches">
+      <h2>Rechtliches</h2>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="lizenz.html">Lizenz &amp; Kaufbedingungen</a></li>
+        <li><a href="medien.html">Medien &amp; Quellen</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Hilfe">
+      <h2>Hilfe</h2>
+      <ul>
+        <li><a href="kontakt.html">Kontakt &amp; Support</a></li>
+        <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+        <li><button type="button" class="linkbtn" data-consent-open>Cookie-Einstellungen</button></li>
+      </ul>
+    </nav>
+    <div class="legal">
+      <span>© 2026 Feldspat Software OG. Alle Rechte vorbehalten.</span>
+      <span>Quellenangaben zu Bildern, Musik und Schriften: <a href="medien.html">Medien &amp; Quellen</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVA SCRIPT -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

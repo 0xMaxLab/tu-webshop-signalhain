@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<title>Datenschutz – Signalhain</title>
+<meta name="description" content="Datenschutzerklärung der Feldspat Software OG für den Signalhain-Shop: Hosting, Cookies, Statistik, Kontaktformular, Bestellung und deine Rechte.">
+<meta name="tdm-reservation" content="1">
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- CONSENT -->
+<section class="consent" id="consent" aria-labelledby="consent-title" hidden>
+  <div class="wrap">
+    <h2 id="consent-title" tabindex="-1">Darf diese Seite Statistikdaten speichern?</h2>
+    <p>Wir speichern im Browser nur, was der Shop braucht: deinen Warenkorb und diese Entscheidung. Mit deiner Erlaubnis zählen wir zusätzlich anonymisiert, welche Seiten aufgerufen werden (Matomo, eigener Server, IP-Adresse gekürzt). Du kannst das jederzeit unten auf jeder Seite unter „Cookie-Einstellungen“ ändern. <a href="datenschutz.html#cookies">Details in der Datenschutzerklärung</a></p>
+    <fieldset>
+      <legend>Kategorien</legend>
+      <label><input type="checkbox" checked disabled> Notwendig (Warenkorb, diese Einstellung)</label>
+      <label><input type="checkbox" id="c-stats"> Statistik (Matomo)</label>
+    </fieldset>
+    <div class="row">
+      <button type="button" class="btn" id="c-reject">Nur notwendige</button>
+      <button type="button" class="btn" id="c-save">Auswahl speichern</button>
+      <button type="button" class="btn" id="c-accept">Alle erlauben</button>
+    </div>
+  </div>
+</section>
+
+<!-- HEADER -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">Signalhain<span class="visually-hidden"> – zur Startseite</span></a>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html">Shop</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="lizenz.html">Lizenz</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="warenkorb.html">Warenkorb <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> Artikel</span></a></li></ul></nav>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<main id="inhalt" tabindex="-1">
+<p class="wrap toast" id="status" role="status" aria-live="polite"></p>
+<div class="wrap page-head">
+  <h1>Datenschutzerklärung</h1>
+  <p>Welche Daten wir verarbeiten, warum, wie lange und was du dagegen tun kannst.</p>
+</div>
+<div class="wrap doc">
+  <nav aria-labelledby="toc-d">
+    <h2 id="toc-d">Inhalt</h2>
+    <ol>
+      <li><a href="#verantwortlich">Verantwortlich</a></li>
+      <li><a href="#hosting">Aufruf der Website</a></li>
+      <li><a href="#cookies">Cookies und Speicher</a></li>
+      <li><a href="#statistik">Statistik</a></li>
+      <li><a href="#kontakt">Kontaktformular</a></li>
+      <li><a href="#bestellung">Bestellung und Zahlung</a></li>
+      <li><a href="#spiel">Im Spiel</a></li>
+      <li><a href="#empfaenger">Empfänger</a></li>
+      <li><a href="#rechte">Deine Rechte</a></li>
+    </ol>
+  </nav>
+  <article>
+    <p class="stand">Stand: 7. November 2026</p>
+    <div class="note"><p><strong>Hinweis zum Studienprojekt:</strong> Kontaktformular, Statistik und Bestellung sind auf dieser Website nur nachgebaut. Es werden dabei keine Daten an uns oder Dritte gesendet. Tatsächlich verarbeitet werden nur die Zugriffsdaten beim Hoster (Punkt 2) und die Einträge im Speicher deines Browsers (Punkt 3). Die übrigen Abschnitte beschreiben, wie der Shop im echten Betrieb arbeiten würde.</p></div>
+
+    <h2 id="verantwortlich">1. Verantwortlich</h2>
+    <p>Verantwortlich im Sinne der DSGVO ist die Feldspat Software OG, Zieglergasse 38/2/14, 1070 Wien, E-Mail: datenschutz@feldspat.example. Wir sind nicht verpflichtet, eine Datenschutzbeauftragte zu bestellen. Für alle Fragen zum Datenschutz ist Lena Hofbauer zuständig.</p>
+
+    <h2 id="hosting">2. Aufruf der Website</h2>
+    <p>Die Website liegt bei GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Wenn du eine Seite aufrufst, verarbeitet GitHub deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse, die vorherige Seite (Referrer) und Angaben zu Browser und Betriebssystem. Das ist technisch nötig, um dir die Seite zu schicken und Angriffe abzuwehren.</p>
+    <dl class="facts">
+      <dt>Rechtsgrundlage</dt><dd>Berechtigtes Interesse an einem sicheren, erreichbaren Webauftritt (Art. 6 Abs. 1 lit. f DSGVO)</dd>
+      <dt>Speicherdauer</dt><dd>Legt GitHub fest, siehe <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>. Wir selbst haben keinen Zugriff auf diese Protokolle.</dd>
+      <dt>Drittland</dt><dd>USA. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert. Die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission vom 10. Juli 2023 (Art. 45 DSGVO).</dd>
+    </dl>
+    <p>Schriften, Bilder und Videos liefern wir selbst aus. Beim Aufruf werden keine Daten an Google Fonts, YouTube oder andere Dienste übertragen.</p>
+
+    <h2 id="cookies">3. Cookies und Speicher im Browser</h2>
+    <p>Wir setzen keine Cookies. Wir nutzen aber den lokalen Speicher deines Browsers (localStorage), der rechtlich genauso behandelt wird. Nach § 165 Abs. 3 TKG 2021 brauchen wir dafür deine Einwilligung, außer der Eintrag ist unbedingt nötig für einen Dienst, den du ausdrücklich nutzen willst.</p>
+    <div class="table-scroll">
+      <table class="data">
+        <caption>Einträge im Browser-Speicher</caption>
+        <thead><tr><th scope="col">Name</th><th scope="col">Zweck</th><th scope="col">Art</th><th scope="col">Dauer</th></tr></thead>
+        <tbody>
+          <tr><td><code>sh-cart</code></td><td>Merkt sich, was im Warenkorb liegt</td><td>notwendig</td><td>bis du ihn leerst oder den Browser-Speicher löschst</td></tr>
+          <tr><td><code>sh-consent</code></td><td>Merkt sich deine Entscheidung im Cookie-Hinweis</td><td>notwendig</td><td>12 Monate, danach fragen wir neu</td></tr>
+          <tr><td><code>_pk_id</code></td><td>Matomo: zufällige Besucherkennung, um wiederkehrende Aufrufe zu zählen</td><td>Statistik, nur mit Einwilligung</td><td>13 Monate</td></tr>
+          <tr><td><code>_pk_ses</code></td><td>Matomo: fasst Aufrufe innerhalb von 30 Minuten zu einem Besuch zusammen</td><td>Statistik, nur mit Einwilligung</td><td>30 Minuten</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Du kannst deine Einwilligung jederzeit unter „Cookie-Einstellungen“ unten auf jeder Seite widerrufen. Ablehnen ist genauso einfach wie Zustimmen, und der Shop funktioniert auch ohne Statistik vollständig.</p>
+
+    <h2 id="statistik">4. Statistik mit Matomo</h2>
+    <p>Wenn du zustimmst, zählen wir mit Matomo, welche Seiten wie oft aufgerufen werden, woher Besucher:innen kommen und wie viele bis zum Warenkorb gehen. Matomo läuft auf unserem eigenen Server in einem Rechenzentrum in Deutschland, die Daten gehen an niemanden weiter. Die IP-Adresse wird vor dem Speichern um zwei Bytes gekürzt, sodass wir dich nicht erkennen können.</p>
+    <dl class="facts">
+      <dt>Rechtsgrundlage</dt><dd>Deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 165 Abs. 3 TKG 2021)</dd>
+      <dt>Speicherdauer</dt><dd>Rohdaten 6 Monate, danach nur zusammengefasste Zahlen</dd>
+      <dt>Auftragsverarbeiter</dt><dd>Hetzner Online GmbH, Gunzenhausen (Server-Hosting) mit Vertrag nach Art. 28 DSGVO</dd>
+    </dl>
+
+    <h2 id="kontakt">5. Kontaktformular und E-Mail</h2>
+    <p>Wenn du uns über das <a href="kontakt.html">Kontaktformular</a> oder per E-Mail schreibst, verarbeiten wir deinen Namen, deine E-Mail-Adresse, den Betreff und deine Nachricht, um zu antworten.</p>
+    <dl class="facts">
+      <dt>Rechtsgrundlage</dt><dd>Bei Fragen zu einer Bestellung oder vor einem Kauf: Vertrag bzw. vorvertragliche Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO). Sonst unser berechtigtes Interesse, Anfragen zu beantworten (Art. 6 Abs. 1 lit. f DSGVO).</dd>
+      <dt>Speicherdauer</dt><dd>12 Monate nach der letzten Nachricht. Gehört die Anfrage zu einer Bestellung, so lange wie die Bestellung (Punkt 6).</dd>
+      <dt>Pflicht?</dt><dd>Nein. Ohne E-Mail-Adresse können wir dir aber nicht antworten.</dd>
+    </dl>
+
+    <h2 id="bestellung">6. Bestellung und Zahlung</h2>
+    <p>Für eine Bestellung brauchen wir deine E-Mail-Adresse, deinen Namen, dein Wohnsitzland und bei Geschenken die E-Mail-Adresse der beschenkten Person. Daraus erstellen wir die Rechnung, schicken den Download-Link und berechnen die richtige Umsatzsteuer. Ein Kundenkonto gibt es nicht.</p>
+    <p>Die Zahlung wickelt Stripe Payments Europe, Limited, 1 Grand Canal Street Lower, Dublin 2, Irland, ab. Kartendaten oder Bankzugangsdaten gibst du nur bei Stripe ein, wir sehen sie nie. Stripe ist für die Zahlungsabwicklung und Betrugsprüfung selbst verantwortlich und kann Daten an Stripe, Inc. in den USA übermitteln (zertifiziert nach dem Data Privacy Framework).</p>
+    <dl class="facts">
+      <dt>Rechtsgrundlage</dt><dd>Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Für Rechnungen und Buchhaltung die gesetzliche Aufbewahrungspflicht (Art. 6 Abs. 1 lit. c DSGVO in Verbindung mit § 132 BAO und § 212 UGB).</dd>
+      <dt>Speicherdauer</dt><dd>7 Jahre ab Ende des Kalenderjahres, länger nur bei laufenden Verfahren. Die E-Mail-Adresse der beschenkten Person löschen wir 30 Tage nach Einlösung.</dd>
+      <dt>Pflicht?</dt><dd>Ja, ohne diese Angaben können wir nicht verkaufen.</dd>
+    </dl>
+    <p>Wir schicken keine Werbung. Einen Newsletter gibt es nicht.</p>
+
+    <h2 id="spiel">7. Im Spiel</h2>
+    <p>Signalhain sammelt keine Daten. Es gibt keine Telemetrie, keine Werbe-IDs und keine Verbindung zu unseren Servern außer der Update-Prüfung, die du in den Einstellungen abschalten kannst. Dabei wird nur die Versionsnummer abgefragt. Unser Update-Server speichert keine IP-Adressen.</p>
+
+    <h2 id="empfaenger">8. Empfänger im Überblick</h2>
+    <ul>
+      <li>GitHub, Inc. (Hosting der Website), USA, Data Privacy Framework</li>
+      <li>Hetzner Online GmbH (Server für Matomo, E-Mail und Downloads), Deutschland, Auftragsverarbeiter</li>
+      <li>Stripe Payments Europe, Limited (Zahlung), Irland, eigene Verantwortung</li>
+      <li>unsere Steuerberatung, soweit es für Buchhaltung und Steuererklärung nötig ist</li>
+    </ul>
+    <p>Wir verkaufen keine Daten und treffen keine automatisierten Entscheidungen im Sinne von Art. 22 DSGVO.</p>
+
+    <h2 id="rechte">9. Deine Rechte</h2>
+    <p>Du hast das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grund berechtigter Interessen (Art. 21 DSGVO). Eine Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+    <p>Schreib dazu an datenschutz@feldspat.example. Wir antworten innerhalb eines Monats.</p>
+    <p>Wenn du meinst, dass wir gegen Datenschutzrecht verstoßen, kannst du dich bei der österreichischen Datenschutzbehörde beschweren: Barichgasse 40–42, 1030 Wien, <a href="https://www.dsb.gv.at">www.dsb.gv.at</a>.</p>
+  </article>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <h2>Feldspat Software OG</h2>
+      <p>Kleines Spielestudio in Wien-Neubau. Wir machen Signalhain, ein ruhiges Rätselspiel über ein Stellwerk am Ende der Strecke.</p>
+      <p>Zieglergasse 38/2/14, 1070 Wien<br>hallo@feldspat.example</p>
+    </div>
+    <nav aria-label="Rechtliches">
+      <h2>Rechtliches</h2>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="lizenz.html">Lizenz &amp; Kaufbedingungen</a></li>
+        <li><a href="medien.html">Medien &amp; Quellen</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Hilfe">
+      <h2>Hilfe</h2>
+      <ul>
+        <li><a href="kontakt.html">Kontakt &amp; Support</a></li>
+        <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+        <li><button type="button" class="linkbtn" data-consent-open>Cookie-Einstellungen</button></li>
+      </ul>
+    </nav>
+    <div class="legal">
+      <span>© 2026 Feldspat Software OG. Alle Rechte vorbehalten.</span>
+      <span>Quellenangaben zu Bildern, Musik und Schriften: <a href="medien.html">Medien &amp; Quellen</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVA SCRIPT -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

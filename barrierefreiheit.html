@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<title>Barrierefreiheit – Signalhain</title>
+<meta name="description" content="Erklärung zur Barrierefreiheit des Signalhain-Shops: Stand der Vereinbarkeit mit WCAG 2.2 AA, bekannte Einschränkungen, Feedback und Beschwerdeweg.">
+<meta name="tdm-reservation" content="1">
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- CONSENT -->
+<section class="consent" id="consent" aria-labelledby="consent-title" hidden>
+  <div class="wrap">
+    <h2 id="consent-title" tabindex="-1">Darf diese Seite Statistikdaten speichern?</h2>
+    <p>Wir speichern im Browser nur, was der Shop braucht: deinen Warenkorb und diese Entscheidung. Mit deiner Erlaubnis zählen wir zusätzlich anonymisiert, welche Seiten aufgerufen werden (Matomo, eigener Server, IP-Adresse gekürzt). Du kannst das jederzeit unten auf jeder Seite unter „Cookie-Einstellungen“ ändern. <a href="datenschutz.html#cookies">Details in der Datenschutzerklärung</a></p>
+    <fieldset>
+      <legend>Kategorien</legend>
+      <label><input type="checkbox" checked disabled> Notwendig (Warenkorb, diese Einstellung)</label>
+      <label><input type="checkbox" id="c-stats"> Statistik (Matomo)</label>
+    </fieldset>
+    <div class="row">
+      <button type="button" class="btn" id="c-reject">Nur notwendige</button>
+      <button type="button" class="btn" id="c-save">Auswahl speichern</button>
+      <button type="button" class="btn" id="c-accept">Alle erlauben</button>
+    </div>
+  </div>
+</section>
+
+<!-- HEADER -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">Signalhain<span class="visually-hidden"> – zur Startseite</span></a>
+    <nav class="nav" aria-label="Hauptnavigation"><ul><li><a href="index.html">Shop</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="lizenz.html">Lizenz</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="warenkorb.html">Warenkorb <span class="cart-count" data-cart-count>0</span><span class="visually-hidden"> Artikel</span></a></li></ul></nav>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<main id="inhalt" tabindex="-1">
+<p class="wrap toast" id="status" role="status" aria-live="polite"></p>
+<div class="wrap page-head">
+  <h1>Erklärung zur Barrierefreiheit</h1>
+  <p>Wie gut diese Website für alle nutzbar ist, was noch nicht passt und wie du uns Barrieren melden kannst.</p>
+</div>
+<div class="wrap doc">
+  <nav aria-labelledby="toc-b">
+    <h2 id="toc-b">Inhalt</h2>
+    <ol>
+      <li><a href="#geltung">Geltungsbereich</a></li>
+      <li><a href="#stand">Stand der Vereinbarkeit</a></li>
+      <li><a href="#umsetzung">Was wir umgesetzt haben</a></li>
+      <li><a href="#nicht">Nicht barrierefreie Inhalte</a></li>
+      <li><a href="#erstellung">Erstellung dieser Erklärung</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#durchsetzung">Durchsetzung</a></li>
+    </ol>
+  </nav>
+  <article>
+    <p class="stand">Erstellt am 7. November 2026, zuletzt geprüft am 7. November 2026</p>
+
+    <h2 id="geltung">1. Geltungsbereich</h2>
+    <p>Die Feldspat Software OG will ihren Webshop für alle Menschen zugänglich machen, unabhängig von Beeinträchtigungen. Diese Erklärung gilt für alle Seiten unter dieser Adresse, also Shop, Warenkorb, Kontaktformular und die rechtlichen Seiten. Für das Spiel Signalhain selbst gibt es einen eigenen Abschnitt unter Punkt 4.</p>
+    <p>Als Kleinstunternehmen mit vier Beschäftigten und weniger als 2 Millionen Euro Jahresumsatz fallen wir mit unserem Shop unter die Ausnahme für Kleinstunternehmen im Barrierefreiheitsgesetz (BaFG). Wir halten uns trotzdem freiwillig an die Anforderungen, weil wir niemanden ausschließen wollen und weil es sowieso die bessere Website ergibt.</p>
+
+    <h2 id="stand">2. Stand der Vereinbarkeit</h2>
+    <p>Diese Website ist mit den <strong>Web Content Accessibility Guidelines (WCAG) 2.2 auf Stufe AA vollständig vereinbar</strong>. Damit erfüllt sie auch WCAG 2.1 AA und die harmonisierte Norm EN 301 549, auf die BaFG und Web-Zugänglichkeits-Gesetz verweisen.</p>
+
+    <h2 id="umsetzung">3. Was wir umgesetzt haben</h2>
+    <ul>
+      <li>Alle Funktionen lassen sich mit der Tastatur bedienen. Der Fokus ist immer deutlich sichtbar und wird nie von anderen Elementen verdeckt. Der Cookie-Hinweis steht darum im normalen Seitenfluss statt als schwebendes Fenster.</li>
+      <li>Jede Seite hat eine logische Überschriftenstruktur und benannte Bereiche (Kopf, Navigation, Inhalt, Fuß). Screenreader können damit direkt zum Inhalt springen.</li>
+      <li>Texte haben mindestens ein Kontrastverhältnis von 4,5 : 1, große Schrift und Bedienelemente mindestens 3 : 1, im hellen wie im dunklen Farbschema.</li>
+      <li>Informationen hängen nie nur an der Farbe. Pflichtfelder sind beschriftet, fehlt etwas, zeigt der Browser beim Absenden eine Meldung direkt am Feld an.</li>
+      <li>Klickbare Flächen sind mindestens 24 × 24 Pixel groß, die meisten Schaltflächen 44 Pixel hoch.</li>
+      <li>Die Seite lässt sich auf 400 % vergrößern und funktioniert bei 320 Pixel Breite ohne seitliches Scrollen.</li>
+      <li>Alle Bilder haben Alternativtexte. Das Video auf der Startseite hat Untertitel für die Umgebungsgeräusche, eine Audiodeskription über die Sprachausgabe des Browsers und eine Textfassung. Audiodateien haben eine Beschreibung daneben.</li>
+      <li>Nichts startet von selbst. Animationen entfallen, wenn im Betriebssystem „Bewegung reduzieren“ eingestellt ist.</li>
+      <li>Die Schrift Atkinson Hyperlegible wurde für Menschen mit Sehbeeinträchtigung entwickelt. Ähnliche Zeichen wie I, l und 1 sind gut zu unterscheiden.</li>
+      <li>Wir verlangen kein Konto, kein Passwort und kein CAPTCHA.</li>
+      <li>Die Hilfe (Kontakt, Barrierefreiheit) steht auf jeder Seite an derselben Stelle im Fußbereich.</li>
+    </ul>
+
+    <h2 id="nicht">4. Nicht barrierefreie Inhalte</h2>
+    <p>Auf der Website sind uns derzeit keine Barrieren bekannt. Wenn du eine findest, sag es uns bitte (Punkt 6).</p>
+    <p>Eine Einschränkung betrifft einen Inhalt, für den wir eine Alternative anbieten:</p>
+    <ul>
+      <li>Die Audiodeskription des Videos nutzt die Sprachausgabe deines Browsers. Einige ältere Browser können das nicht. Die Textfassung steht direkt unter dem Video.</li>
+    </ul>
+    <h3>Das Spiel Signalhain</h3>
+    <p>Das Spiel selbst ist ein eigenes Produkt und nicht Teil dieser Website. Es ist mit Tastatur spielbar, hat einstellbare Schriftgröße, Untertitel und farbunabhängige Signale. <strong>Screenreader werden im Spiel derzeit nicht unterstützt</strong>, weil das Stellpult eine grafische Fläche ohne Zugänglichkeitsschnittstelle ist. Wir arbeiten an einer Textansicht des Gleisbilds und wollen sie 2027 nachliefern.</p>
+
+    <h2 id="erstellung">5. Wie diese Erklärung entstanden ist</h2>
+    <p>Wir haben die Website selbst geprüft:</p>
+    <ul>
+      <li>automatisiert mit axe-core 4 auf allen Seiten, im hellen und dunklen Farbschema,</li>
+      <li>stichprobenartig mit WAVE und Lighthouse,</li>
+      <li>manuell: Bedienung nur mit Tastatur, Zoom auf 200 % und 400 %, Ansicht bei 320 Pixel Breite, Kontraste mit einem Kontrastrechner.</li>
+    </ul>
+    <p>Wir prüfen nach jeder größeren Änderung neu, mindestens aber einmal im Jahr.</p>
+
+    <h2 id="feedback">6. Feedback und Kontakt</h2>
+    <p>Ist dir eine Barriere aufgefallen, oder brauchst du einen Inhalt in einer anderen Form? Schreib uns:</p>
+    <ul>
+      <li>über das <a href="kontakt.html">Kontaktformular</a>, Thema „Barriere auf der Website oder im Spiel“</li>
+      <li>per E-Mail an barrierefrei@feldspat.example</li>
+    </ul>
+    <p>Wir bestätigen den Eingang innerhalb von zwei Werktagen und melden uns spätestens nach zwei Wochen mit einer Lösung oder einem Zeitplan.</p>
+
+    <h2 id="durchsetzung">7. Durchsetzungsverfahren</h2>
+    <p>Wenn du mit unserer Antwort nicht zufrieden bist, kannst du dich an das Sozialministeriumservice wenden. Es ist in Österreich die Marktüberwachungsbehörde nach dem Barrierefreiheitsgesetz.</p>
+    <p>Fühlst du dich wegen einer Behinderung benachteiligt, kannst du beim Sozialministeriumservice außerdem ein kostenloses Schlichtungsverfahren nach dem Bundes-Behindertengleichstellungsgesetz beantragen. Das ist Voraussetzung für eine spätere Klage.</p>
+    <dl class="facts">
+      <dt>Stelle</dt><dd>Sozialministeriumservice, Landesstelle Wien</dd>
+      <dt>Anschrift</dt><dd>Babenbergerstraße 5, 1010 Wien</dd>
+      <dt>Website</dt><dd><a href="https://www.sozialministeriumservice.gv.at">www.sozialministeriumservice.gv.at</a></dd>
+    </dl>
+  </article>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <h2>Feldspat Software OG</h2>
+      <p>Kleines Spielestudio in Wien-Neubau. Wir machen Signalhain, ein ruhiges Rätselspiel über ein Stellwerk am Ende der Strecke.</p>
+      <p>Zieglergasse 38/2/14, 1070 Wien<br>hallo@feldspat.example</p>
+    </div>
+    <nav aria-label="Rechtliches">
+      <h2>Rechtliches</h2>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="lizenz.html">Lizenz &amp; Kaufbedingungen</a></li>
+        <li><a href="medien.html">Medien &amp; Quellen</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Hilfe">
+      <h2>Hilfe</h2>
+      <ul>
+        <li><a href="kontakt.html">Kontakt &amp; Support</a></li>
+        <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+        <li><button type="button" class="linkbtn" data-consent-open>Cookie-Einstellungen</button></li>
+      </ul>
+    </nav>
+    <div class="legal">
+      <span>© 2026 Feldspat Software OG. Alle Rechte vorbehalten.</span>
+      <span>Quellenangaben zu Bildern, Musik und Schriften: <a href="medien.html">Medien &amp; Quellen</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVA SCRIPT -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

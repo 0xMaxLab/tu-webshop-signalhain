@@ -1,0 +1,5 @@
+[
+{"location":"/assets/img/stellwerk.webp","tdm-reservation":0},
+{"location":"/assets/media/signal*","tdm-reservation":0},
+{"location":"/","tdm-reservation":1,"tdm-policy":"https://feldspat.example/lizenz.html#bleibt"}
+]

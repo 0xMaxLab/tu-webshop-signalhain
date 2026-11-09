@@ -1,5 +1,6 @@
 # Feldspat Software OG – Nutzungsvorbehalt nach § 42h Abs. 6 UrhG / Art. 4 Abs. 3 DSM-RL:
 # Text- und Data-Mining für das Training von KI-Modellen ist nicht gestattet.
+
 Content-Signal: ai-train=no, search=yes, ai-input=no
 
 User-agent: GPTBot
